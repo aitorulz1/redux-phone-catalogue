@@ -4,6 +4,7 @@ require('../config/db');
 const Phone = require('../models/Phone');
 
 const phones = [
+
   {
       "_id": 0,
       "name": "iPhone 7",
@@ -100,6 +101,7 @@ const phones = [
       "processor": "Snapdragon 450",
       "ram": 3
   }
+  
 ]
 
 Phone.create(phones)

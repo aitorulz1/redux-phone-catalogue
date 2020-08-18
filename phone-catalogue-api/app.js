@@ -4,14 +4,15 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 require('./config/db');
-require('dotenv').config();
+require('dotenv/config');
 
-/**
- * Configure express
- */
+
+// Express
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 
 
 //CORS on ExpressJS crossorigin problems
@@ -22,26 +23,29 @@ app.use(function(req, res, next) {
 });
 
 
-/**
- * Configure routes
- */
+
+// Routes
+
 const router = require('./routes/phones');
 app.use('/', router);
 
 
 
-/**
- * Configure CORS
- */
+// CORS
+
 app.use(cors({
     credentials: true,
     origin: ['http://localhost:3000']
 }))
 
+
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     next(createError(404));
 });
+
+
 
 // error handler
 app.use(function (error, req, res, next) {
@@ -65,19 +69,19 @@ app.use(function (error, req, res, next) {
     res.json(data);
 });
 
-/** 
- * Listen on provided port
- */
+
+
+// Listening to Server
+
 const port = normalizePort(process.env.PORT || '3000');
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// Helper functions
 
-/**
- * Normalize a port into a number, string, or false.
- */
+
+// PORT
+
 function normalizePort(val) {
     var port = parseInt(val, 10);
     if (isNaN(port)) {
