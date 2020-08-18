@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <Fragment>
+      <h1>Phone Catalogue</h1>
+      </Fragment>
   );
 }
 
