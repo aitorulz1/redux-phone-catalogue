@@ -14,11 +14,11 @@ export function obtenerListadoPhones() {
 
         try {
             setTimeout( async() => {
-                const respuesta = await clienteAxios.get('/phones')
-                dispatch(descargaPhonesSucceed())
+                const respuesta = await clienteAxios.get('/phones');
+                console.log(respuesta)
             }, 3000);
         } catch (error) {
-                dispatch(descargaPhonesError())
+                // dispatch(descargaPhonesError())
         }
     }
 }
@@ -28,12 +28,12 @@ const descargarPhones = () => ({
     payload: true
 })
 
-const descargarPhonesSucceed = () => ({
-    type: DATA_SUCCEED,
-    payload: phones
-})
+// const descargaPhonesSucceed = (phones) => ({
+//     type: DATA_SUCCEED,
+//     payload: phones
+// })
 
-const descargarPhonesError = () => ({
-    type: DATA_ERROR,
-    payload: true
-})
+// const descargaPhonesError = () => ({
+//     type: DATA_ERROR,
+//     payload: true
+// })

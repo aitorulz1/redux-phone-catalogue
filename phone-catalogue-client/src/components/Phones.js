@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { obtenerListadoPhones } from '../actions/phonesActions';
@@ -10,7 +10,14 @@ import { obtenerListadoPhones } from '../actions/phonesActions';
 
 const Phones = () => {
 
+    const dispatch = useDispatch();
 
+    useEffect(() => {
+
+        // Consultar la api
+        const cargarPhones = () => dispatch(obtenerListadoPhones() );
+        cargarPhones();
+    }, []);
 
 
 
