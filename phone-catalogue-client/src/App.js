@@ -2,6 +2,9 @@ import React, { Fragment } from 'react';
 
 import Sidebar from './layout/Sidebar';
 import Main from './layout/Main';
+import { BrowserRouter, Switch, Route} from 'react-router-dom'
+
+import Catalog from './components/Catalog';
 
 
 // Redux
@@ -10,14 +13,15 @@ import store from './store';
 
 function App() {
   return (
-    <Fragment>
-      <Provider store={store} >
+  <BrowserRouter>
 
-        <Sidebar />
-        <Main />
-      
+      <Provider store={store} >
+        <Switch>
+          <Route exact patch='/' component={Catalog}></Route>
+        </Switch>      
       </Provider>
-    </Fragment>
+    
+  </BrowserRouter>
   );
 }
 

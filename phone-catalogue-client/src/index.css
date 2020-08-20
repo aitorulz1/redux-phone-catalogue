@@ -30,10 +30,18 @@
     padding-top: calc(104px - 52px);
 }
 
-.sidebar-list-container {
+.sidebar-list-container{
     position: relative;
     text-align: center;
     margin: 0 auto;
     width: 85%;
     padding: 5% 0%;
+    height: calc(100vh - 190px);
+}
+
+.sidebar-list{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

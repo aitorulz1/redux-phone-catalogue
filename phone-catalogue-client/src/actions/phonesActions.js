@@ -8,32 +8,29 @@ import clienteAxios from '../config/axios';
 
 // Get all the phones
 
-export function obtenerListadoPhones() {
-    return async (dispatch) => {
-        dispatch( descargarPhones () );
-
+export const obtenerListadoPhones = () => async (dispatch) => {
+        
         try {
-            setTimeout( async() => {
+                dispatch( descargarPhones () )
                 const respuesta = await clienteAxios.get('/phones');
-                console.log(respuesta)
-            }, 3000);
+                dispatch( descargaPhonesSucceed(respuesta.data))
         } catch (error) {
-                // dispatch(descargaPhonesError())
+                dispatch(descargaPhonesError())
         }
     }
-}
+
 
 const descargarPhones = () => ({
     type: GET_DATA,
     payload: true
 })
 
-// const descargaPhonesSucceed = (phones) => ({
-//     type: DATA_SUCCEED,
-//     payload: phones
-// })
+const descargaPhonesSucceed = phones => ({
+    type: DATA_SUCCEED,
+    payload: phones
+})
 
-// const descargaPhonesError = () => ({
-//     type: DATA_ERROR,
-//     payload: true
-// })
+const descargaPhonesError = () => ({
+    type: DATA_ERROR,
+    payload: true
+})

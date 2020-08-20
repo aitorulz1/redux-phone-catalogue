@@ -9,7 +9,6 @@ import{
 
 const initialState = {
     phones: [],
-    listado: false,
     error: null,
     loading: false
 }
@@ -26,6 +25,7 @@ export default function(state = initialState, action) {
             return{
                 ...state,
                 loading: false,
+                error: null,
                 phones: action.payload
             }
         case DATA_ERROR:

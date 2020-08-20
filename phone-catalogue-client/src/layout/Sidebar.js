@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Phones from '../components/Phones';
+import Phones from '../components/Catalog';
 import logo from '../images/logo-sidebar.png'
 
 const Sidebar = () => {
