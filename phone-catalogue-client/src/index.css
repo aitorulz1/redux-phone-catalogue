@@ -1,3 +1,11 @@
+
+
+@font-face {
+  font-family: scout;
+  src: url(./font/Scout-Regular.otf);
+}
+
+
 .sidebar-container {
   position: relative;
   width: 400px;
@@ -41,7 +49,26 @@
 
 .sidebar-list{
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
+
+.model-container{
+    width: 100%;
+    padding: 5% 0%;
+    border-bottom: 1px solid #f5f4f2;
+}
+
+.model-container a{
+  font-family: scout;
+  font-size: 20px;
+  color: #39ba96;
+  text-decoration: none;
+}
+
+.model-container a:hover, a:active{
+  color: #000;
+}
+

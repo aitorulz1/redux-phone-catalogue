@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import Sidebar from './layout/Sidebar';
-import Main from './layout/Main';
-import { BrowserRouter, Switch, Route} from 'react-router-dom'
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Catalog from './components/Catalog';
+
 
 
 // Redux
@@ -17,7 +16,7 @@ function App() {
 
       <Provider store={store} >
         <Switch>
-          <Route exact patch='/' component={Catalog}></Route>
+          <Route exact patch='/phones' component={Catalog}></Route>
         </Switch>      
       </Provider>
     

@@ -20,6 +20,7 @@ const phoneSchema = new mongoose.Schema({
   },
   price: Number,
   imageFileName: String,
+  phoneColor: String,
   screen: String,
   processor: String,
   ram: Number

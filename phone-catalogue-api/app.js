@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-//CORS on ExpressJS crossorigin problems
+//CORS on ExpressJS | cross origin problems
 app.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
 });
@@ -28,15 +28,6 @@ app.use(function(req, res, next) {
 
 const router = require('./routes/phones');
 app.use('/', router);
-
-
-
-// CORS
-
-app.use(cors({
-    credentials: true,
-    origin: ['http://localhost:3001']
-}))
 
 
 

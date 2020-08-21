@@ -13,6 +13,7 @@ const phones = [
       "color": "black",
       "price": 769,
       "imageFileName": "IPhone_7.png",
+      "phoneColor":"black.png",
       "screen": "4,7 inch IPS",
       "processor": "A10 Fusion",
       "ram": 2
@@ -25,6 +26,7 @@ const phones = [
       "color": "grey",
       "price": 209,
       "imageFileName": "Galaxy_S7.png",
+      "phoneColor":"grey.png",
       "screen": "5,1 inch Quad-HD",
       "processor": "Snapdragon 820",
       "ram": 4
@@ -37,6 +39,7 @@ const phones = [
       "color": "blue",
       "price": 399,
       "imageFileName": "Honor_10.png",
+      "phoneColor":"blue.png",
       "screen": "5,84 inch Full-HD",
       "processor": "Kirin 970",
       "ram": 6
@@ -49,6 +52,7 @@ const phones = [
       "color": "white",
       "price": 249,
       "imageFileName": "P10_Lite.jpg",
+      "phoneColor":"white.png",
       "screen": "5,2 inch Full-HD",
       "processor": "Kirin 658",
       "ram": 4
@@ -60,7 +64,8 @@ const phones = [
       "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
       "color": "black",
       "price": 275,
-      "imageFileName": "Nokia_7.1.jpg",
+      "imageFileName": "Nokia_7.1.png",
+      "phoneColor":"black.png",
       "screen": "5,84 inch Full-HD",
       "processor": "Octa-core",
       "ram": 4
@@ -72,7 +77,8 @@ const phones = [
       "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
       "color": "black",
       "price": 359,
-      "imageFileName": "ZenPhone_5.jpg",
+      "imageFileName": "ZenPhone_5.png",
+      "phoneColor":"black.png",
       "screen": "6,2 inch Full-HD",
       "processor": "Snapdragon 636",
       "ram": 6
@@ -84,7 +90,8 @@ const phones = [
       "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
       "color": "black",
       "price": 179,
-      "imageFileName": "Xiaomi_MI_A2.jpeg",
+      "imageFileName": "Xiaomi_MI_A2.png",
+      "phoneColor":"black.png",
       "screen": "5,99 inch Full-HD",
       "processor": "Snapdragon 660",
       "ram": 6
@@ -97,6 +104,7 @@ const phones = [
       "color": "black",
       "price": 199,
       "imageFileName": "Moto_G6.png",
+      "phoneColor":"black.png",
       "screen": "5,7 inch Full-HD",
       "processor": "Snapdragon 450",
       "ram": 3
