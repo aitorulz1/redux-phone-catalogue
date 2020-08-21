@@ -60,7 +60,7 @@ const Phones = () => {
                                 //     key={phone.id}
                                 //     phone={phone}
                                 // />
-                        <p onClick={() => onClickShow(phone.id)}>{phone.name}</p>
+                        <div className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
                         )))
                         }
                     </div>

@@ -1,13 +1,29 @@
 import React from 'react';
 
 const PhoneDetail = ({phone}) => {
-    console.log(phone)
 
-    const {name} = phone
+    const {name, manufacturer, description, color, price, imageFileName, screen, processor, ram} = phone
     return ( 
-        <div>
-            {name}
-        </div>
+        <div className="data-container">
+            
+            <div className="data-title-container">
+                {name}
+            </div>
+
+            <div className="">
+
+                <div className="">
+                    <img src={`/phones/${imageFileName}`} />
+                </div>
+
+                <div className="">
+
+                </div>
+
+            </div>
+            
+        </div> // Fin de data-containier
+        
      );
 }
  

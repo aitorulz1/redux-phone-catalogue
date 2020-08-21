@@ -1,4 +1,4 @@
-
+/* Font */
 
 @font-face {
   font-family: scout;
@@ -22,7 +22,8 @@
   background:#354c46;
 }
 
-/* Logo Sidebar */
+
+/* Sidebar */
 
 .sidebar-header-container {
   margin: 0 auto;
@@ -55,20 +56,21 @@
     width: 100%;
 }
 
-.model-container{
+
+/* Sidebar links*/
+
+.select-phone{
     width: 100%;
     padding: 5% 0%;
     border-bottom: 1px solid #f5f4f2;
+    font-family: scout;
+    font-size: 20px;
+    color: #39ba96;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.model-container a{
-  font-family: scout;
-  font-size: 20px;
-  color: #39ba96;
-  text-decoration: none;
-}
-
-.model-container a:hover, a:active{
+.select-phone:hover, a:active{
   color: #000;
 }
 
