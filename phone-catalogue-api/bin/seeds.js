@@ -10,7 +10,7 @@ const phones = [
       "name": "iPhone 7",
       "manufacturer": "Apple",
       "description": "iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.",
-      "color": "black",
+      "color": "black.png",
       "price": 769,
       "imageFileName": "IPhone_7.png",
       "phoneColor":"black.png",
@@ -26,7 +26,7 @@ const phones = [
       "color": "grey",
       "price": 209,
       "imageFileName": "Galaxy_S7.png",
-      "phoneColor":"grey.png",
+      "phoneColor": "grey.png",
       "screen": "5,1 inch Quad-HD",
       "processor": "Snapdragon 820",
       "ram": 4
@@ -91,7 +91,7 @@ const phones = [
       "color": "black",
       "price": 179,
       "imageFileName": "Xiaomi_MI_A2.png",
-      "phoneColor":"black.png",
+      "phoneColor": "black.png",
       "screen": "5,99 inch Full-HD",
       "processor": "Snapdragon 660",
       "ram": 6

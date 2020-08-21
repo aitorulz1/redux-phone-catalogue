@@ -5,10 +5,26 @@
   src: url(./font/Scout-Regular.otf);
 }
 
+@font-face {
+  font-family: scout-thin;
+  src: url(./font/Scout-Thin.otf);
+}
+
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
 
 .sidebar-container {
   position: relative;
-  width: 400px;
+  width: 25%;
   height: 100vh;
   float: left;
   background: #fff;
@@ -16,10 +32,25 @@
 
 .main-container {
   position: relative;
-  width: calc(100% - 400px);
+  width: calc(100% - 25%);
   height: 100vh;
   float: left;
-  background:#354c46;
+  background:#fff;
+}
+
+.main-container-inicio {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  float: left;
+  background: #354c46;
+}
+
+.main-container-inicio img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
 }
 
 
@@ -49,11 +80,12 @@
 }
 
 .sidebar-list{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
 }
 
 
@@ -74,3 +106,260 @@
   color: #000;
 }
 
+
+
+
+/*-------------------  Main  -------------------*/
+
+.data-container {
+  background-color: #fff;
+  height: 100vh;
+  border-left: 1px solid #f5f4f2;
+}
+
+
+/* title */
+
+.data-title-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 95px;
+    border-bottom: 1px solid #f5f4f2;
+    text-align: left;
+    font-family: scout;
+    font-size: 40px;
+    padding: 53px 0px 0px 0px;
+}
+
+
+/* phone container */
+
+.phone-data-container{
+  position: relative;
+  width: 100%;
+  display: table;
+}
+
+.phone-container {
+  width: 55%;
+  position: relative;
+  height: calc(100vh - 150px);
+  float: left;
+  background-color: #f5f4f2;
+  overflow: hidden;
+}
+
+.phone-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Data Container */
+
+.info-container{
+  width: 45%;
+  min-width: 300px;
+  float: left;
+  font-family: scout;
+  display: table;
+}
+
+.info {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0%;
+}
+
+
+/* manufacturer */
+
+.description-container{
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #f5f4f2;
+  padding: 20px 0px;
+}
+
+.description-container:last-child{
+  border-bottom: 0px solid #f5f4f2;
+}
+
+.manufacturer{
+  display: block;
+  float: left;
+  font-size: 30px;
+}
+
+.price {
+  float: right;
+  font-size: 30px;
+}
+
+
+/* color */
+
+.color-desc {
+  display: block;
+  font-size: 20px;
+  float: left;
+}
+
+.color-img {
+  display: block;
+  float: right;
+}
+
+.light{
+  font-family: scout-thin;
+}
+
+
+/* Description */
+
+.description-title-dark {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.description-info {
+  font-family: scout-thin;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.title-dark {
+  display: block;
+  float: left;
+  font-size: 22px;
+}
+
+.desc-info {
+  display: block;
+  float: right;
+  font-family: scout-thin;
+  font-size: 20px;
+}
+
+
+
+
+/*-------------------  Responsive  -------------------*/
+
+@media only screen and (max-width: 960px) {
+  
+
+  /* Sidebar */
+
+.sidebar-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  float: left;
+  background: #fff;
+  display: table;
+}
+
+.sidebar-header-container {
+  margin: 0 auto;
+  width: 85%;
+  height: 115px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.sidebar-header-container img {
+  width: 75%;
+  max-width: 275px;
+  padding-top: calc(104px - 79px);
+}
+
+.sidebar-list-container {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 85%;
+  padding: 0% 0%;
+  height: 100%;
+}
+
+.sidebar-list {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 0%);
+  width: 100%;
+}
+
+.select-phone {
+  width: 50%;
+  padding: 10px 0%;
+  border-bottom: 1px solid #ccc;
+  font-family: scout;
+  font-size: 20px;
+  color: #39ba96;
+  text-decoration: none;
+  cursor: pointer;
+  float: left;
+}
+
+
+
+/* Main */
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 00vh;
+  float: left;
+  background: #354c46;
+}
+
+
+/* Title */
+
+.data-title-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-family: scout;
+  font-size: 40px;
+  padding: 30px 0px 0px 0px;
+}
+
+
+
+/* Image */
+
+.phone-container {
+  width: 100%;
+  position: relative;
+  height: auto;
+  float: none;
+  background-color: #f5f4f2;
+  overflow: hidden;
+}
+
+.phone-container img {
+  position: relative;
+  top: 50%;
+  min-width: 250px;
+  width: 30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.info-container {
+  width: 100%;
+  min-width: 300px;
+  float: none;
+  font-family: scout;
+  display: table;
+}
+
+}

@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import PhoneDetail from './PhoneDetail'
 import logo from '../images/logo-sidebar.png';
+import logoMain from '../images/logo-main.png';
 import { Link } from 'react-router-dom';
 
 // useSelector es la forma de obtener el state y useDispatch nos permite a través de dispatch, pasar una función a la función que traido de Actions
@@ -72,7 +73,7 @@ const Phones = () => {
                 {index !== null ?
             <PhoneDetail 
             phone={phones[index]}
-            /> : <div></div>    
+            /> : <div className="main-container-inicio"><img src={logoMain} /></div>    
             }
                         
             </div>
