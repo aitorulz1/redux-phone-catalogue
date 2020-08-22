@@ -10,7 +10,7 @@ const phones = [
       "name": "iPhone 7",
       "manufacturer": "Apple",
       "description": "iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.",
-      "color": "black.png",
+      "color": "black",
       "price": 769,
       "imageFileName": "IPhone_7.png",
       "phoneColor":"black.png",
@@ -51,7 +51,7 @@ const phones = [
       "description": "Great phone with an excellent interface. One of the best mid price range phones in the market.",
       "color": "white",
       "price": 249,
-      "imageFileName": "P10_Lite.jpg",
+      "imageFileName": "P10_Lite.png",
       "phoneColor":"white.png",
       "screen": "5,2 inch Full-HD",
       "processor": "Kirin 658",
@@ -112,6 +112,8 @@ const phones = [
   
 ]
 
+
+
 Phone.create(phones)
   .then(() => {
     console.info("Seeds success:", phones);
@@ -121,3 +123,4 @@ Phone.create(phones)
     console.error("Seeds error:", phones);
     mongoose.connection.close();
   })
+
