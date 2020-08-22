@@ -3,6 +3,7 @@ import PhoneDetail from './PhoneDetail'
 import logo from '../images/logo-sidebar.png';
 import logoMain from '../images/logo-main.png';
 import { Link } from 'react-router-dom';
+import Spinner from './Spinner';
 
 // useSelector es la forma de obtener el state y useDispatch nos permite a través de dispatch, pasar una función a la función que traido de Actions
 
@@ -26,7 +27,9 @@ const Phones = () => {
     // Consultar la api
 
     const cargarPhones = () => dispatch( obtenerListadoPhones() );
+    setTimeout(() => {
     cargarPhones();
+    }, 3000);
     }, []);
 
 
@@ -53,7 +56,7 @@ const Phones = () => {
                 <div className="sidebar-list-container">
                     <div className="sidebar-list">
                         
-                        { phones.length === 0 ? 'No Phones To Show' 
+                        { phones.length === 0 ? <Spinner /> 
                         : 
                         (
                         phones.sort((a, b) => a.id > b.id ? 1 : -1).map(phone => (
