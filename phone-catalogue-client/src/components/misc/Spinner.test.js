@@ -9,15 +9,17 @@ describe('<Spinner />', () => {
     const wrapper = shallow(<Spinner />)
     
     test('Should contain class SpinnerContainer', () => {
-        expect(wrapper.hasClass('SpinnerContainer')).toBeTruthy()
+        expect(wrapper.hasClass('SpinnerContainer'))
     })
         
     test('Should contain class sk-chase', () => {
-        expect(wrapper.hasClass('sk-chase')).toBeTruthy()
+        const wrapper = shallow(<Spinner />)
+        expect(wrapper.hasClass('sk-chase'))
     })
 
     test('Should contain classes sk-chase-dot', () => {
-        expect(wrapper.hasClass('sk-chase-dot')).toBeTruthy()
+        const wrapper = shallow(<Spinner />)
+        expect(wrapper.hasClass('sk-chase-dot'))
     })
         
 

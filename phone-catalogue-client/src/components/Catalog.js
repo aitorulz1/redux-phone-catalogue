@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import PhoneDetail from './PhoneDetail'
+import PhoneDetail from './PhoneDetail';
 
 import logoMain from '../images/logo-main.png';
 import Header from './misc/Header';
 import Spinner from './misc/Spinner';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 // useSelector es la forma de obtener el state y useDispatch nos permite a través de dispatch, pasar una función a la función que traido de Actions
 
@@ -19,10 +19,17 @@ import { obtenerListadoPhones } from '../actions/phonesActions';
 
 const Phones = () => {
 
+    // Crear estado inicial para obtener el index onClick
+    
     const [index, setIndex] = useState(null)
 
+    // Necesario para obtner la función obtenerListadoPhones del Action y que dispatch no sea undefined
+    
     const dispatch = useDispatch();
 
+    
+    // Antes de que cargue la página...
+    
     useEffect(() => {
 
     // Consultar la api
@@ -53,7 +60,7 @@ const Phones = () => {
                 <div className="sidebar-list-container">
                     <div className="sidebar-list">
                         
-                        { phones.length === 0 ? <Spinner /> 
+                        { !phones || phones.length === 0 ? <Spinner /> 
                         : 
                         (
                         phones.sort((a, b) => a.id > b.id ? 1 : -1).map(phone => (

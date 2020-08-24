@@ -14,7 +14,7 @@ function App() {
 
       <Provider store={store} >
         <Switch>
-          <Route exact patch='/phones' component={Catalog}></Route>
+          <Route exact patch='/phones' component={ Catalog }></Route>
         </Switch>      
       </Provider>
     

@@ -15,8 +15,7 @@ describe('<Header />', () => {
 
     test('Should render an image', () => {
         const wrapper = shallow(<Header />)
-        const component = component.find('img')
-        expect(wrapper.type('img')).toBe('img')
+        expect(wrapper.find('img').prop("src")).toEqual('logo-sidebar.png');
     })
     
 })
