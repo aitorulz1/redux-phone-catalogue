@@ -2,7 +2,8 @@ import React from 'react';
 
 const PhoneDetail = ({phone}) => {
 
-    const {name, manufacturer, description, color, price, imageFileName, phoneColor, screen, processor, ram} = phone
+    const {name, manufacturer, description, color, price, imageFileName, phoneColor, screen, processor, ram} = phone;
+    
     return ( 
         <div className="data-container">
             
@@ -13,7 +14,7 @@ const PhoneDetail = ({phone}) => {
             <div className="phone-data-container">
 
                 <div className="phone-container">
-                    <img src={`/phones/${imageFileName}`} />
+                    <img src={`/phones/${imageFileName}`} alt={`phone: ${name}`} />
 
                 </div>
 
@@ -28,7 +29,7 @@ const PhoneDetail = ({phone}) => {
 
                             <div className="description-container">
                                 <div className="color-desc">color | <span className="light">{color}</span></div>
-                                <div className="color-img"><img src={`/phone-color/${phoneColor}`} /></div>
+                                <div className="color-img"><img src={`/phone-color/${phoneColor}`} alt={`color: ${color}`}/></div>
                             </div>
 
                             <div className="description-container">

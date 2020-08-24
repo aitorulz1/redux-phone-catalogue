@@ -1,9 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import PhoneDetail from './PhoneDetail'
-import logo from '../images/logo-sidebar.png';
+
 import logoMain from '../images/logo-main.png';
-import { Link } from 'react-router-dom';
-import Spinner from './Spinner';
+import Header from './misc/Header';
+import Spinner from './misc/Spinner';
+import PropTypes from 'prop-types'
 
 // useSelector es la forma de obtener el state y useDispatch nos permite a través de dispatch, pasar una función a la función que traido de Actions
 
@@ -30,7 +31,7 @@ const Phones = () => {
     setTimeout(() => {
     cargarPhones();
     }, 3000);
-    }, []);
+    }, );
 
 
  
@@ -47,11 +48,7 @@ const Phones = () => {
             
             <div className="sidebar-container">
 
-                    <div className="sidebar-header-container">
-                        <div className="">
-                            <Link to="/"><img src={logo} alt="logo" /></Link>
-                        </div>
-                    </div>
+                    <Header />
                 
                 <div className="sidebar-list-container">
                     <div className="sidebar-list">
@@ -75,14 +72,20 @@ const Phones = () => {
             <div className="main-container">
                 {index !== null ?
             <PhoneDetail 
-            phone={phones[index]}
-            /> : <div className="main-container-inicio"><img src={logoMain} /></div>    
+             phone={phones[index]}
+            /> : <div className="main-container-inicio"><img src={logoMain} alt="PhoneCatalogue" /></div>    
             }
                         
             </div>
 
         </Fragment>
      );
+}
+
+
+PhoneDetail.propTypes = {
+    phone: PropTypes.object.isRequired,
+    phones: PropTypes.object.isRequired,
 }
  
 export default Phones;
