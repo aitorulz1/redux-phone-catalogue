@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { enzymeSetUp } from '../../Utils';
 import Header from './Header';
-import  enzymeSetUp  from '../../setupTests';
+
 
 enzymeSetUp();
 

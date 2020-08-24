@@ -1,9 +1,9 @@
 import React from 'react';
-import enzymeSetUp  from '../../Utils';
+import { enzymeSetUp } from '../../Utils';
 import { shallow } from 'enzyme';
 import Spinner from './Spinner';
 
-enzymeSetUp()
+enzymeSetUp();
 
 describe('<Spinner />', () => {
     const wrapper = shallow(<Spinner />)
