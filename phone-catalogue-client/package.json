@@ -58,7 +58,6 @@
     "enzyme-to-json": "^3.5.0"
   },
   "jest": {
-    "verbose": true,
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
