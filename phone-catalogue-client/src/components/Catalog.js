@@ -63,12 +63,12 @@ const Phones = () => {
                         { !phones || phones.length === 0 ? <Spinner /> 
                         : 
                         (
-                        phones.sort((a, b) => a.id > b.id ? 1 : -1).map(phone => (
+                        phones.sort((a, b) => a.id > b.id ? 1 : -1).map((phone) => (
                                 // <PhoneList
                                 //     key={phone.id}
                                 //     phone={phone}
                                 // />
-                        <div className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
+                        <div key={phone.id} className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
                         )))
                         }
                     </div>

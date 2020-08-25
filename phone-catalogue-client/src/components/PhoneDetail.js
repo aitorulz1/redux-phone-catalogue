@@ -2,8 +2,13 @@ import React from 'react';
 
 const PhoneDetail = ({phone}) => {
 
+    if(!phone) {
+        return  true;
+    }
+
     const {name, manufacturer, description, color, price, imageFileName, phoneColor, screen, processor, ram} = phone;
     
+
     return ( 
         <div className="data-container">
             

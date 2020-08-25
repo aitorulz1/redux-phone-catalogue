@@ -123,12 +123,12 @@ ul {
 .data-title-container {
     margin: 0 auto;
     width: 90%;
-    height: 95px;
+    height: 105px;
     border-bottom: 1px solid #f5f4f2;
     text-align: left;
     font-family: scout;
     font-size: 40px;
-    padding: 53px 0px 0px 0px;
+    padding: 45px 0px 0px 0px;
 }
 
 
@@ -325,12 +325,12 @@ ul {
 .data-title-container {
   margin: 0 auto;
   width: 90%;
-  height: 80px;
-  border-bottom: 1px solid #ccc;
+  height: 105px;
+  border-bottom: 1px solid #f5f4f2;
   text-align: center;
   font-family: scout;
   font-size: 40px;
-  padding: 30px 0px 0px 0px;
+  padding: 45px 0px 0px 0px;
 }
 
 

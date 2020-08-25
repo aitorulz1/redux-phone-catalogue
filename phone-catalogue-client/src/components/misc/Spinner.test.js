@@ -6,9 +6,9 @@ import Spinner from './Spinner';
 enzymeSetUp();
 
 describe('<Spinner />', () => {
-    const wrapper = shallow(<Spinner />)
     
     test('Should contain class SpinnerContainer', () => {
+        const wrapper = shallow(<Spinner />)
         expect(wrapper.hasClass('SpinnerContainer'))
     })
         

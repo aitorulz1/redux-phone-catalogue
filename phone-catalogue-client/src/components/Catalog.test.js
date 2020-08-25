@@ -12,7 +12,9 @@ const mockStore = configureStore(middlewares);
 enzymeSetUp();
 
 describe('<Catalog />', () => {
-    it('should render a spinner if the phone list does not load', () => {
+
+
+    it('The component is into a Provider and finds PhoneDetail component into it', () => {
         const store = mockStore({
           phones: { complete: false }
         });
@@ -21,7 +23,7 @@ describe('<Catalog />', () => {
             <Catalog />
           </Provider>
         )
-        expect(wrapper.find('PhoneDetail').length)
+        expect(wrapper.find('PhoneDetail')).toBeTruthy()
       })
 
 });
