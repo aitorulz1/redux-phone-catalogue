@@ -1,4 +1,3 @@
-import React from 'react';
 import phonesReducer from './phonesReducer';
 import{
     GET_DATA,
@@ -17,6 +16,7 @@ describe('reducer', () => {
             expect(newState.error).toEqual(null) 
         })
 
+        // Before I had type: types.GET_DATA and did not take it. I import directly the types from types and delete "types" and now is not undefined
 
     test('Should return requesting data pending true', () => {
         const newState = phonesReducer(undefined, {        
@@ -26,6 +26,8 @@ describe('reducer', () => {
     })
 
     test('Should return requesting the object and error false', () => {
+
+        // Or I do define the objectphones or the testing does not take it
 
         const phones = [
             {

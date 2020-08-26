@@ -34,9 +34,9 @@ const Phones = () => {
 
     // Consultar la api
 
-    const cargarPhones = () => dispatch( obtenerListadoPhones() );
+    const descargarPhones = () => dispatch( obtenerListadoPhones() );
     setTimeout(() => {
-    cargarPhones();
+    descargarPhones();
     }, 3000);
     }, );
 
@@ -68,7 +68,7 @@ const Phones = () => {
                                 //     key={phone.id}
                                 //     phone={phone}
                                 // />
-                        <div key={phone.id} className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
+                            <div key={phone.id} className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
                         )))
                         }
                     </div>
@@ -78,7 +78,7 @@ const Phones = () => {
 
             <div className="main-container">
                 {index !== null ?
-            <PhoneDetail 
+            <PhoneDetail                 
              phone={phones[index]}
             /> : <div className="main-container-inicio"><img src={logoMain} alt="PhoneCatalogue" /></div>    
             }
