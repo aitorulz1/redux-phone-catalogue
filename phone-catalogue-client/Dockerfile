@@ -1,17 +1,20 @@
-# pull official base image
-FROM node:13.12.0-alpine
+# Use the official image as a parent image.
+FROM node:current-slim
 
-# set working directory
-WORKDIR /app
+# Set the working directory.
+WORKDIR /usr/src/app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# Copy the file from your host to your current location.
+COPY package.json .
 
-# install app dependencies
-COPY package.json ./
+# Run the command inside your image filesystem.
+RUN npm install
 
-# add app
-COPY . ./
+# Add metadata to the image to describe which port the container is listening on at runtime.
+EXPOSE 3000
 
-# start app
-CMD ["npm", "start"]
+# Run the specified command within the container.
+CMD [ "npm", "start" ]
+
+# Copy the rest of your app's source code from your host to your image filesystem.
+COPY . .
