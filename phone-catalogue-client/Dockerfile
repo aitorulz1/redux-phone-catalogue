@@ -1,20 +1,16 @@
-# Use the official image as a parent image.
-FROM node:current-slim
+FROM node:1.19.2-alpine
 
-# Set the working directory.
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy the file from your host to your current location.
-COPY package.json .
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Run the command inside your image filesystem.
-RUN npm install
+COPY package*.json ./
 
-# Add metadata to the image to describe which port the container is listening on at runtime.
+RUN npm install 
+
 EXPOSE 3000
 
-# Run the specified command within the container.
-CMD [ "npm", "start" ]
+COPY . ./
 
-# Copy the rest of your app's source code from your host to your image filesystem.
-COPY . .
+CMD ["npm", "start"]
+
