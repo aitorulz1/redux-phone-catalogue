@@ -33,5 +33,10 @@ Cors
 Cors (HTTP access control) configuration implemented, the API works in PORT http://localhost:4000
 
 
+Docker
+Got to phone-catalogie-client git(master) and insert => docker build -f Dockerfile.prod -t sample:prod .
+Now, run http://localhost:1337/ in your browser
+
+
 
 
