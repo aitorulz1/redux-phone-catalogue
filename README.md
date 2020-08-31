@@ -32,6 +32,6 @@ See the section about deployment for more information.
 Cors
 Cors (HTTP access control) configuration implemented, the API works in PORT http://localhost:4000
 
-In case you want to use the API with a library like React.js that uses port 3001 by default
+
 
 
