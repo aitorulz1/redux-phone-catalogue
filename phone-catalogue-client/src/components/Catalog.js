@@ -90,9 +90,5 @@ const Phones = () => {
 }
 
 
-PhoneDetail.propTypes = {
-    phone: PropTypes.object.isRequired,
-    phones: PropTypes.object.isRequired,
-}
  
 export default Phones;
