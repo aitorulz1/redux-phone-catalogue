@@ -4,7 +4,6 @@ import PhoneDetail from './PhoneDetail';
 import logoMain from '../images/logo-main.png';
 import Header from './misc/Header';
 import Spinner from './misc/Spinner';
-import PropTypes from 'prop-types';
 
 // useSelector es la forma de obtener el state y useDispatch nos permite a través de dispatch, pasar una función a la función que traido de Actions
 
@@ -64,10 +63,6 @@ const Phones = () => {
                         : 
                         (
                         phones.sort((a, b) => a.id > b.id ? 1 : -1).map((phone) => (
-                                // <PhoneList
-                                //     key={phone.id}
-                                //     phone={phone}
-                                // />
                             <div key={phone.id} className="select-phone" onClick={() => onClickShow(phone.id)}>{phone.name}</div>
                         )))
                         }
