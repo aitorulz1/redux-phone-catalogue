@@ -21,9 +21,6 @@ npm run seeds
 Launches the seeds configuration for creating a MongoDB
 The db calls an api with some different phones. The db only have a length of 8 items for testing, you can add as much as you like
 
-Heroku
-It comes with the necessary configuration for the deployment in Heroku, you only need to configure your own database baut it can be run at: https://phone-catalogue-gss.herokuapp.com/
-
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
