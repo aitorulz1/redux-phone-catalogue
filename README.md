@@ -1,7 +1,7 @@
 # redux-phone-catalogue
 The project has a REST API and React-redux API
 
-The API is deployed in Heroku and also can run locally with the commands entered in the README of the API, it is necessary to have mongo in the background to work
+The API can run locally with the commands entered in the README of the API, it is necessary to have mongo in the background to work
 
 React has the necessary configuration to work also with the service provided with Heroku or locally
 
